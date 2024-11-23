@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Device Monitor</title>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js"></script>
+    <link rel="stylesheet" href="webpage_design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">IoT Monitor</a>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="webpage.html">Dashboard</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container2">
+        <header class="header">
+            <h1>IoT Device Monitoring and Control</h1>
+        </header>
+        <br>
+        <!-- Device Status Section -->
+        <section class="section devices" id="devices">
+            <section class="section devices" id="devices">
+                <h2>Devices</h2>
+                <form>
+                    <label for="device-select-menu">Select a device:</label>
+                    <select id="device-select-menu" class="form-input">
+                        <option value="device1">Device 1</option>
+                        <option value="device2">Device 2</option>
+                    </select>
+                </form>
+            </section>
+        </section>
+        <br>
+
+        <section class="section motors" id="motors">
+            <section class="section motors" id="motors">
+                <h2>Motors</h2>
+                <form>
+                    <label for="motor-select-menu">Select a motor:</label>
+                    <select id="motor-select-menu" class="form-input">
+                        <option value="motor1">Motor 1</option>
+                        <option value="motor2">Motor 2</option>
+                        <option value="motor3">Motor 3</option>
+                    </select>
+                </form>
+            </section>
+        </section>
+        <br>
+        <!-- Timer Section -->
+        <section class="section timer" id="timer">
+            <h2>Schedule Device Operations</h2>
+            <form id="timer-form" class="timer-form">
+
+                <div class="form-group">
+                    <label for="date-select">Select Date:</label>
+                    <input type="date" id="date-select" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="start-time">Start Time:</label>
+                    <input type="time" id="start-time" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="end-time">End Time:</label>
+                    <input type="time" id="end-time" class="form-input" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Set Timer</button>
+            </form>
+        </section>     
+        <br>
+        <!-- Logs Section -->
+        <section class="section logs" id="logs">
+            <h2>Activity Logs</h2>
+            <ul id="logs-list" class="logs-list">
+                <!-- Logs will be dynamically populated -->
+            </ul>
+        </section>
+    </div>
+    <br>
+    
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 IoT Device Monitor. All rights reserved.</p>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+    <script src="webpage_func.js"></script>
+
+</body>
+</html>
